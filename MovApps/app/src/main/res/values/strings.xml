@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Mov Apps</string>
+    <string name="lewati_perkenalan">Lewati Perkenalan</string>
+    <string name="lanjutkan">Lanjutkan</string>
+    <string name="desc_now_playing">Lebih mudah mengetahui
+film yang sedang tayang</string>
+    <string name="pre_sale_tiket">Pre-Sale Tiket</string>
+    <string name="desc_pre_sale">Tidak khawatir kehabisan tiket
+dengan Pre-sale</string>
+    <string name="memulai">Memulai</string>
+    <string name="cashless">Tanpa uang tunai</string>
+    <string name="desc_cashless">Gunakan E-wallet untuk
+transaksi tiket nonton anda</string>
+    <string name="sign_in">Masuk</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="daftar_akun_baru">Daftar Akun Baru</string>
+    <string name="masuk_akun">Masuk Akun</string>
+    <string name="masuk">Masuk</string>
+    <string name="daftar">Daftar</string>
+    <string name="nama">Nama</string>
+    <string name="email">Email</string>
+    <string name="upload_nanti">Upload Nanti</string>
+    <string name="simpan_dan_lanjutkan">Simpan Dan Lanjutkan</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="namaku">Muh Lukman</string>
+    <string name="now_playing">Sedang Tayang</string>
+    <string name="coming_soon">Segera Tayang</string>
+    <string name="alitta_battle">Alitta Battle</string>
+    <string name="action_sci_fi">Action, Sci-fi</string>
+    <string name="_7_3">7.3</string>
+    <string name="desc_movie">Alita: Battle Angel adalah sebuah film aksi
+cyberpunk Amerika Serikat tahun 2019
+berdasarkan pada seri manga karya Yukito
+Kishiro, Gunnm atau Battle Angel Alita.
+</string>
+    <string name="storyboard">Deskripsi</string>
+    <string name="who_s_played">Pemain</string>
+    <string name="layar_bioskop">Layar Bioskop</string>
+    <string name="pilih_bangku">Pilih Bangku</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="booked">Sudah Di Pesan</string>
+    <string name="empty">Kosong</string>
+    <string name="selected">Terpilih</string>
+    <string name="checkout">Checkout</string>
+    <string name="batalkan">Batalkan</string>
+    <string name="bayar_sekarang">Bayar Sekarang</string>
+    <string name="kapan">Kapan</string>
+    <string name="tanggal_waktu">Tanggal Menonton</string>
+    <string name="cinema">Cinema</string>
+    <string name="when">Kapan</string>
+    <string name="no_kursi">No Kursi</string>
+    <string name="seats">Kursi</string>
+    <string name="total_harus_bayar">Total Harus Bayar</string>
+    <string name="total_saldo">Total Saldo</string>
+    <string name="simpan">Simpan</string>
+    <string name="saldo_tersedia">Saldo Tersedia</string>
+    <string name="detail_transaksi">Detail Transaksi</string>
+    <string name="gagal_checkOut"> "Saldo pada e-wallet kamu tidak mencukupi untuk melakukan transaksi"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">E</string>
+    <string name="total_harga">Total Harga</string>
+    <string name="tiket">Tiket</string>
+    <string name="total_harus_di_bayar">Total Harus Di bayar</string>
+    <string name="happy_watching">Selamat Menonton</string>
+    <string name="tiket_berhasil_terbeli_dan_selamat_menonton">Tiket berhasil terbeli dan selamat menonton</string>
+    <string name="lihat_tiket">Lihat Tiket</string>
+    <string name="home">Home</string>
+    <string name="pilih_bioskop">Pilih Bioskop</string>
+    <string name="nama_bioskop">Nama Bioskop</string>
+    <string name="beli_tiket">Beli Tiket</string>
+    <string name="anda_ingin_keluar_jika_ya_otomatis_anda_akan_membatalkan_pesanan">Anda Ingin Keluar ? Jika Ya Otomatis anda akan membatalkan pesanan</string>
+    <string name="ya">Ya</string>
+    <string name="tidak">Tidak</string>
+    <string name="ticket_code">Kode Tiket</string>
+    <string name="_0_movie">0 Film</string>
+    <string name="ticket_is_empty">Tiket Kosong</string>
+    <string name="date_buy">Tanggal Beli</string>
+    <string name="todays">Hari ini</string>
+    <string name="detail_ticket">Detail Tiket</string>
+    <string name="showtimes">Jam Tayang</string>
+    <string name="seat_items">Item Kursi</string>
+    <string name="scan_qr_barcode">Pindai Kode Batang</string>
+    <string name="purchase_date">Tanggal Pembelian</string>
+    <string name="close">Tutup</string>
+    <string name="cancel">Batal</string>
+    <string name="pilih_tanggal_nonton_kamu">Pilih Tanggal Nonton Kamu</string>
+    <string name="history">Riwayat</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="user_settings">Pengaturan Pengguna</string>
+    <string name="keep_it_up_to_date">Tetap Perbarui</string>
+    <string name="youre_name">Nama Kamu</string>
+    <string name="my_wallet">Dompet Saya</string>
+    <string name="edit_profile">Ubah Profil</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="help">Bantuan</string>
+    <string name="signout">Keluar</string>
+    <string name="search_bioskop">Cari Bioskop</string>
+    <string name="isi_saldo">Isi Saldo</string>
+</resources>

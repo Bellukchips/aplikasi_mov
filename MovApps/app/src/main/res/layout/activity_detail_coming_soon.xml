@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_detail"
+    android:layout_width="match_parent"
+    tools:context=".activity.DetailComingSoonActivity"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarComing"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbarComing"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            android:background="@color/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/poster"
+                android:id="@+id/img_detail"
+                app:layout_collapseMode="parallax"/>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarComing"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:layout_collapseMode="parallax" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <include layout="@layout/detail_item"/>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_pilih_bangkuComing"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="16dp"
+            android:text="@string/beli_tiket"
+            android:background="@drawable/shape_rectangle_pink"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

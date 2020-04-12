@@ -1,0 +1,2 @@
+rootProject.name='Mov Apps'
+include ':app'

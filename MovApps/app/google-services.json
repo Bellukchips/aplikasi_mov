@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "841059947355",
+    "firebase_url": "https://bwa-mov-54761.firebaseio.com",
+    "project_id": "bwa-mov-54761",
+    "storage_bucket": "bwa-mov-54761.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841059947355:android:bb255e01494a5c16dc807e",
+        "android_client_info": {
+          "package_name": "com.belluk.movapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841059947355-koh14s6at5vcvifk1ncik61g67dn257a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWZexBxWpCyHdf_Lo2d02e81Y41fcN4Y4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841059947355-koh14s6at5vcvifk1ncik61g67dn257a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

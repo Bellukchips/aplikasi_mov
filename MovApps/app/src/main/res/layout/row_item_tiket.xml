@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="8dp"
+    android:id="@+id/card"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/colorGrey"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_poster"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_poster">
+
+            <ImageView
+                android:id="@+id/iv_poster_image_tiket"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_title_tiket_detail"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/tv_genre_tiket"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/whiteGrey"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_tiket_detail"
+            tools:text="genre"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_rate_tiket_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:drawableStart="@drawable/ic_star_yellow_24dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@color/whiteGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title_tiket_detail"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_kode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/ticket_code"
+            android:textColor="@color/colorWhiteGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_line_strip" />
+
+        <TextView
+            android:id="@+id/tv_date_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="10sp"
+            android:text="@string/date_buy"
+            android:textColor="@color/colorWhiteGrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

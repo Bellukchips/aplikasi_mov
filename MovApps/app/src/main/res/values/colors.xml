@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#12153B</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#367044</color>
+    <color name="colorBlueDark">#12153B</color>
+    <color name="colorRedAccent">#FE0741</color>
+    <color name="colorGrey">#292A50</color>
+    <color name="colorGreyBlue">#44456C</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorBooked">#28BDD5</color>
+    <color name="whiteGrey">#F7F7F7</color>
+    <color name="colorDarkGrey">#605E5E</color>
+    <color name="colorWhiteGrey">#B8B8B8</color>
+    <color name="colorText">#98A7A1</color>
+</resources>
