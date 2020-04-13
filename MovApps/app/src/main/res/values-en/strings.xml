@@ -16,7 +16,7 @@ your ticket transaction</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="daftar_akun_baru">Register</string>
-    <string name="masuk_akun">Enter Account</string>
+    <string name="masuk_akun">Sign In</string>
     <string name="masuk">Sign In</string>
     <string name="daftar">Register</string>
     <string name="nama">Name</string>
@@ -101,4 +101,6 @@ Kishiro, Gunnm atau Battle Angel Alita.
     <string name="signout">Sign Out</string>
     <string name="search_bioskop">Search Cinema</string>
     <string name="isi_saldo">Top Up Balance</string>
+    <string name="selamat_top_up">Congratulations Your Balance</string>
+    <string name="kamu_berhasil">Has Been Successfully filled </string>
 </resources>

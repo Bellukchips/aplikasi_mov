@@ -32,7 +32,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".activity.TopUpActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.TopUpSuccess" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.TopUpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service
             android:name=".service.MyService"

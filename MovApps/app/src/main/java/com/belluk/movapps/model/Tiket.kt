@@ -15,5 +15,6 @@ data class Tiket(
     var rating:String?="",
     var timer:String?="",
     var kodeTiket:String?="",
-    var cinema:String?=""
+    var cinema:String?="",
+    var dateBuy:String?=""
 ):Parcelable

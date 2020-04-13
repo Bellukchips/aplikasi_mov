@@ -39,9 +39,7 @@ class TiketFragment : Fragment() {
     lateinit var mDatabase:DatabaseReference
     lateinit var mHistory:DatabaseReference
     private var dateFormat: SimpleDateFormat? = null
-    private var timeFormat: SimpleDateFormat? = null
     lateinit var mdb:DatabaseReference
-    private var position:Int = 0
     private lateinit var history: History
     private lateinit var movieHelper: MovieHelper
     override fun onStart() {

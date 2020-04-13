@@ -13,21 +13,14 @@ import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.belluk.movapps.R
 import com.belluk.movapps.adapter.CheckoutAdapter
-import com.belluk.movapps.db.MovieHelper
-import com.belluk.movapps.fragment.NoConnectionFragment
-import com.belluk.movapps.model.Bioskop
-import com.belluk.movapps.model.Checkout
-import com.belluk.movapps.model.Film
-import com.belluk.movapps.model.Tiket
+import com.belluk.movapps.model.*
 import com.belluk.movapps.utils.PreferencesUsers
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_checkout.*
-import kotlinx.android.synthetic.main.activity_pilih_bangku.*
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -43,7 +36,10 @@ class CheckOutActivity : AppCompatActivity() {
     private var dateTiket: String? = null
     lateinit var mDatabase:DatabaseReference
     lateinit var mDbUser:DatabaseReference
+    lateinit var mDbWallet:DatabaseReference
     lateinit var mSeat:DatabaseReference
+    private var dateFormat: SimpleDateFormat? = null
+    private var calendar: Calendar? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checkout)
@@ -54,6 +50,7 @@ class CheckOutActivity : AppCompatActivity() {
         mDatabase = FirebaseDatabase.getInstance().getReference("Tiket")
         mSeat = FirebaseDatabase.getInstance().getReference("Seat")
         mDbUser = FirebaseDatabase.getInstance().getReference("User")
+        mDbWallet = FirebaseDatabase.getInstance().getReference("Wallet")
         dataList = intent.getSerializableExtra("data") as ArrayList<Checkout>
         val dateGet = intent.getStringExtra("date")
 //        val dataSeat = intent.getParcelableExtra<Checkout>("kursi")
@@ -71,6 +68,8 @@ class CheckOutActivity : AppCompatActivity() {
         }
         nama_cinema.text = dataBioskop.nama+" , "+data.cinema
         tv_saldo.text = formatRupiah.format(preferencesUsers.getValues("saldo")!!.toDouble())
+        dateFormat =  SimpleDateFormat("MM/dd/yyyy")
+        calendar = Calendar.getInstance()
         val saldo = preferencesUsers.getValues("saldo")!!.toDouble()
         val totalharga = total.toDouble()
         val hasilHitung = saldo - totalharga
@@ -79,10 +78,11 @@ class CheckOutActivity : AppCompatActivity() {
         val cinema = data.cinema
         val user = preferencesUsers.getValues("user")
         val genreFilm = data.genre
-        val dateBuy = dateGet
+        val date = dateGet
         val timer = data.jam
         val poster = data.poster
         val rating = data.rating
+        val dateBuy = dateFormat!!.format(Date())
         if (saldo < totalharga){
             btn_bayar.visibility = View.INVISIBLE
             txt_warning_checkOut.visibility = View.VISIBLE
@@ -95,10 +95,11 @@ class CheckOutActivity : AppCompatActivity() {
             pDialog.setCancelable(false)
             pDialog.setTitle("Prossesing")
             pDialog.show()
-
             //save data
             val random = GenerateString.randomString(7)
-            val dataTiket = Tiket(namaFilm,bioskop,genreFilm,user,dateBuy,poster,rating,timer,random,cinema)
+            val dataTiket = Tiket(namaFilm,bioskop,genreFilm,user,date,poster,rating,timer,random,cinema,dateBuy)
+            val saveWalet = Wallet(user,random,namaFilm,dateBuy,totalharga.toString(),"0")
+            mDbWallet.child(user.toString()).child(random).setValue(saveWalet)
             mDatabase.child(user.toString()).child(random).setValue(dataTiket)
             for (a in dataList.indices){
                 mDatabase.child(user.toString()).child(random).child("kursi").child(dataList[a].kursi.toString()).child("nama").setValue(dataList[a].kursi)

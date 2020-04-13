@@ -67,6 +67,7 @@ class RegisterActivity : AppCompatActivity() {
         user.nama = inama
         user.password = ipassword
         user.username = iusername
+        user.saldo = "0"
 
         if (iusername != null) {
             checkingUser(iusername, user)
@@ -81,7 +82,7 @@ class RegisterActivity : AppCompatActivity() {
 
                     preferencesUsers.setValues("nama",data.nama.toString())
                     preferencesUsers.setValues("user",data.username.toString())
-                    preferencesUsers.setValues("saldo","")
+                    preferencesUsers.setValues("saldo","0")
                     preferencesUsers.setValues("url","")
                     preferencesUsers.setValues("password",data.password.toString())
                     preferencesUsers.setValues("image","")

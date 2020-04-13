@@ -100,4 +100,6 @@ Kishiro, Gunnm atau Battle Angel Alita.
     <string name="signout">Keluar</string>
     <string name="search_bioskop">Cari Bioskop</string>
     <string name="isi_saldo">Isi Saldo</string>
+    <string name="selamat_top_up">Selamat Saldo</string>
+    <string name="kamu_berhasil">Kamu Berhasil Di Isi</string>
 </resources>
