@@ -1,0 +1,5 @@
+https://rogerdudler.github.io/git-guide/index.id.html
+
+<item name="colorControlNormal">#d32f2f</item>
+    <item name="colorControlActivated">#ff5722</item>
+    <item name="colorControlHighlight">#f44336</item>

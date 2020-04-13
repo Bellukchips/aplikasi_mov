@@ -28,6 +28,9 @@ class MyWalletActivity : AppCompatActivity() {
             balance_wallet?.text = preferencesUsers.getValues("saldo")
             currecy(preferencesUsers.getValues("saldo")!!.toDouble(),balance_wallet)
         }
+        btn_top_up.setOnClickListener {
+            startActivity(Intent(this,TopUpActivity::class.java))
+        }
     }
     private fun currecy(harga:Double, textView: TextView) {
         val localeID = Locale("in", "ID")
