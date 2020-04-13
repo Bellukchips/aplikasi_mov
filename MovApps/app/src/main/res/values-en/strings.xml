@@ -65,7 +65,7 @@ Kishiro, Gunnm atau Battle Angel Alita.
     <string name="e">E</string>
     <string name="total_harga">Price</string>
     <string name="tiket">Ticket</string>
-    <string name="total_harus_di_bayar">total must be paid</string>
+    <string name="total_harus_di_bayar">Total must be paid</string>
     <string name="happy_watching">Happy Watching</string>
     <string name="tiket_berhasil_terbeli_dan_selamat_menonton">Tickets successfully purchased and survived playing</string>
     <string name="lihat_tiket">Show Ticket</string>
@@ -102,5 +102,6 @@ Kishiro, Gunnm atau Battle Angel Alita.
     <string name="search_bioskop">Search Cinema</string>
     <string name="isi_saldo">Top Up Balance</string>
     <string name="selamat_top_up">Congratulations Your Balance</string>
-    <string name="kamu_berhasil">Has Been Successfully filled </string>
+    <string name="kamu_berhasil">Has Been Successfully Filled Now You Can Make Transaction</string>
+    <string name="tidak_ada_transaksi">No Transaction</string>
 </resources>

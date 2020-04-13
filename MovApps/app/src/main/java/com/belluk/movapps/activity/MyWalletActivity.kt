@@ -55,9 +55,11 @@ class MyWalletActivity : AppCompatActivity() {
                 }
                 if (dataList.isNotEmpty()){
                     progressbar_Wallet.visibility = View.GONE
+                    empty_data.visibility = View.GONE
                     rv_transaksi.adapter = WalletAdapter(dataList){}
                 }else{
-                    progressbar_Wallet.visibility = View.VISIBLE
+                    empty_data.visibility = View.VISIBLE
+                    progressbar_Wallet.visibility = View.GONE
                 }
 
             }

@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentActivity
 import com.belluk.movapps.R
 import com.belluk.movapps.model.User
 import com.belluk.movapps.utils.PreferencesUsers
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
@@ -72,12 +73,12 @@ class SignInActivity : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val user = dataSnapshot.getValue(User::class.java)
                 if(user == null){
-                    Toast.makeText(this@SignInActivity, "User tidak ditemukan",Toast.LENGTH_LONG).show()
                     hideDialog()
+                    Snackbar.make(btn_signin,"User tidak ditemukan",Snackbar.LENGTH_LONG).show()
                 }else{
                     if(user.password.equals(iPassword)){
                         hideDialog()
-                        Toast.makeText(this@SignInActivity, "Selamat Datang", Toast.LENGTH_LONG).show()
+//                        Toast.makeText(this@SignInActivity, "Selamat Datang", Toast.LENGTH_LONG).show()
                         preferences.setValues("nama",user.nama.toString())
                         preferences.setValues("user",user.username.toString())
                         preferences.setValues("url",user.url.toString())
@@ -90,8 +91,8 @@ class SignInActivity : AppCompatActivity() {
                         val intent = Intent(this@SignInActivity,HomeScreenActivity::class.java)
                         startActivity(intent)
                     }else{
-                        Toast.makeText(this@SignInActivity, "Password / Username Salah", Toast.LENGTH_LONG).show()
                         hideDialog()
+                        Snackbar.make(btn_signin,"Username / Password Salah",Snackbar.LENGTH_LONG).show()
                     }
                 }
             }

@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.belluk.movapps.R
 import com.belluk.movapps.model.User
 import com.belluk.movapps.utils.PreferencesUsers
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_register.*
 import java.util.*
@@ -79,7 +80,6 @@ class RegisterActivity : AppCompatActivity() {
                 val user = dataSnap.getValue(User::class.java)
                 if(user == null){
                     mFirebaseDatabase.child(iusername).setValue(data)
-
                     preferencesUsers.setValues("nama",data.nama.toString())
                     preferencesUsers.setValues("user",data.username.toString())
                     preferencesUsers.setValues("saldo","0")
@@ -88,11 +88,11 @@ class RegisterActivity : AppCompatActivity() {
                     preferencesUsers.setValues("image","")
                     preferencesUsers.setValues("email",data.email.toString())
                     preferencesUsers.setValues("status","1")
-
+                    finish()
                     val intent = Intent(this@RegisterActivity,RegisterPhotosScreenActivity::class.java).putExtra("nama",data.nama).putExtra("saldo",data.saldo)
                     startActivity(intent)
                 }else{
-                    Toast.makeText(this@RegisterActivity, "User sudah digunakan", Toast.LENGTH_LONG).show()
+                    Snackbar.make(btn_next_register,"Username sudah di gunakan",Snackbar.LENGTH_LONG).show()
                 }
 
             }
